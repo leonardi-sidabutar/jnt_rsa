@@ -1,9 +1,9 @@
     <!--   Core JS Files   -->
-    <script src="<?=base_url('templates')?>/assets/js/core/popper.min.js"></script>
-    <script src="<?=base_url('templates')?>/assets/js/core/bootstrap.min.js"></script>
-    <script src="<?=base_url('templates')?>/assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <script src="<?=base_url('templates')?>/assets/js/plugins/smooth-scrollbar.min.js"></script>
-    <script src="<?=base_url('templates')?>/assets/js/plugins/chartjs.min.js"></script>
+    <script src="<?=base_url('assets')?>/assets/js/core/popper.min.js"></script>
+    <script src="<?=base_url('assets')?>/assets/js/core/bootstrap.min.js"></script>
+    <script src="<?=base_url('assets')?>/assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="<?=base_url('assets')?>/assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="<?=base_url('assets')?>/assets/js/plugins/chartjs.min.js"></script>
     <script>
 var ctx = document.getElementById("chart-bars").getContext("2d");
 
@@ -264,7 +264,7 @@ if (win && document.querySelector('#sidenav-scrollbar')) {
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="<?=base_url('templates')?>/assets/js/material-dashboard.min.js?v=3.1.0"></script>
+    <script src="<?=base_url('assets')?>/assets/js/material-dashboard.min.js?v=3.1.0"></script>
     </body>
 
     </html>

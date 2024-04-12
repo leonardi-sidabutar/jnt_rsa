@@ -54,7 +54,7 @@
                                 <a class="dropdown-item border-radius-md" href="javascript:;">
                                     <div class="d-flex py-1">
                                         <div class="my-auto">
-                                            <img src="<?=base_url('templates')?>/assets/img/team-2.jpg"
+                                            <img src="<?=base_url('assets')?>/assets/img/team-2.jpg"
                                                 class="avatar avatar-sm  me-3 ">
                                         </div>
                                         <div class="d-flex flex-column justify-content-center">
@@ -73,7 +73,7 @@
                                 <a class="dropdown-item border-radius-md" href="javascript:;">
                                     <div class="d-flex py-1">
                                         <div class="my-auto">
-                                            <img src="<?=base_url('templates')?>/assets/img/small-logos/logo-spotify.svg"
+                                            <img src="<?=base_url('assets')?>/assets/img/small-logos/logo-spotify.svg"
                                                 class="avatar avatar-sm bg-gradient-dark  me-3 ">
                                         </div>
                                         <div class="d-flex flex-column justify-content-center">
@@ -333,7 +333,7 @@
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div>
-                                                    <img src="<?=base_url('templates')?>/assets/img/small-logos/logo-xd.svg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/small-logos/logo-xd.svg"
                                                         class="avatar avatar-sm me-3" alt="xd">
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
@@ -346,25 +346,25 @@
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Ryan Tompson">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-1.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-1.jpg"
                                                         alt="team1">
                                                 </a>
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Romina Hadid">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-2.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-2.jpg"
                                                         alt="team2">
                                                 </a>
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Alexander Smith">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-3.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-3.jpg"
                                                         alt="team3">
                                                 </a>
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Jessica Doe">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-4.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-4.jpg"
                                                         alt="team4">
                                                 </a>
                                             </div>
@@ -390,7 +390,7 @@
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div>
-                                                    <img src="<?=base_url('templates')?>/assets/img/small-logos/logo-atlassian.svg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/small-logos/logo-atlassian.svg"
                                                         class="avatar avatar-sm me-3" alt="atlassian">
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
@@ -403,13 +403,13 @@
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Romina Hadid">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-2.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-2.jpg"
                                                         alt="team5">
                                                 </a>
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Jessica Doe">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-4.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-4.jpg"
                                                         alt="team6">
                                                 </a>
                                             </div>
@@ -435,7 +435,7 @@
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div>
-                                                    <img src="<?=base_url('templates')?>/assets/img/small-logos/logo-slack.svg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/small-logos/logo-slack.svg"
                                                         class="avatar avatar-sm me-3" alt="team7">
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
@@ -448,13 +448,13 @@
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Romina Hadid">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-3.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-3.jpg"
                                                         alt="team8">
                                                 </a>
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Jessica Doe">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-1.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-1.jpg"
                                                         alt="team9">
                                                 </a>
                                             </div>
@@ -481,7 +481,7 @@
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div>
-                                                    <img src="<?=base_url('templates')?>/assets/img/small-logos/logo-spotify.svg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/small-logos/logo-spotify.svg"
                                                         class="avatar avatar-sm me-3" alt="spotify">
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
@@ -494,25 +494,25 @@
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Ryan Tompson">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-4.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-4.jpg"
                                                         alt="user1">
                                                 </a>
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Romina Hadid">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-3.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-3.jpg"
                                                         alt="user2">
                                                 </a>
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Alexander Smith">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-4.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-4.jpg"
                                                         alt="user3">
                                                 </a>
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Jessica Doe">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-1.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-1.jpg"
                                                         alt="user4">
                                                 </a>
                                             </div>
@@ -539,7 +539,7 @@
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div>
-                                                    <img src="<?=base_url('templates')?>/assets/img/small-logos/logo-jira.svg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/small-logos/logo-jira.svg"
                                                         class="avatar avatar-sm me-3" alt="jira">
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
@@ -552,7 +552,7 @@
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Ryan Tompson">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-4.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-4.jpg"
                                                         alt="user5">
                                                 </a>
                                             </div>
@@ -578,7 +578,7 @@
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div>
-                                                    <img src="<?=base_url('templates')?>/assets/img/small-logos/logo-invision.svg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/small-logos/logo-invision.svg"
                                                         class="avatar avatar-sm me-3" alt="invision">
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
@@ -591,13 +591,13 @@
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Ryan Tompson">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-1.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-1.jpg"
                                                         alt="user6">
                                                 </a>
                                                 <a href="javascript:;" class="avatar avatar-xs rounded-circle"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Jessica Doe">
-                                                    <img src="<?=base_url('templates')?>/assets/img/team-4.jpg"
+                                                    <img src="<?=base_url('assets')?>/assets/img/team-4.jpg"
                                                         alt="user7">
                                                 </a>
                                             </div>
