@@ -5,9 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="<?=base_url('assets')?>/assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="<?=base_url('assets')?>/assets/img/favicon.png">
     <title>
-        Material Dashboard 2 by Creative Tim
+        J&T- RSA
     </title>
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css"
@@ -15,6 +14,7 @@
     <!-- Nucleo Icons -->
     <link href="<?=base_url('assets')?>/assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="<?=base_url('assets')?>/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="<?=base_url('assets')?>/img/jnt_icon.ico" type="image/x-icon">
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- Material Icons -->
