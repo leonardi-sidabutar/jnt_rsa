@@ -32,7 +32,7 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg blur border-radius-xl top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
           <div class="container-fluid ps-2 pe-0">
-            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="#">
+            <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="#" style="color:black!important">
               Kriptografi  <i>RSA</i>
             </a>
             <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,14 +73,15 @@
 			  <div>
 			  </div>
               <div class="card-body">
-                <form role="form" class="text-start">
+                <form role="form" class="text-start" method="POST" action='<?=base_url('auth')?>'>
+								  <?=$this->session->flashdata('message');?>
                   <div class="input-group input-group-outline my-3 focused is-focused">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-control">
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-control" name="username">
                   </div>
                   <div class="input-group input-group-outline mb-3 focused is-focused">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-control">
+                    <input type="password" class="form-control" name="password">
                   </div>
                   <div class="text-center">
                     <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Login</button>

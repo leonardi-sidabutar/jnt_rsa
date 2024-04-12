@@ -16,7 +16,7 @@
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Navigasi</h6>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white <?=$judul==='home' ? 'active' : ''  ?>" href="#">
+                <a class="nav-link text-white <?=$judul==='home' ? 'active' : ''  ?>" href="<?=base_url('admin/')?>">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">dashboard</i>
                     </div>
@@ -27,7 +27,7 @@
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Data</h6>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white  <?=$judul==='pengiriman' ? 'active' : ''  ?>" href="#">
+                <a class="nav-link text-white  <?=$judul==='pengiriman' ? 'active' : ''  ?>" href="<?=base_url('admin/pengiriman')?>">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">receipt_long</i>
                     </div>
@@ -54,7 +54,7 @@
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account</h6>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white " href="<?=base_url('admin/login')?>">
+                <a class="nav-link text-white " href="<?=base_url('auth/logout')?>">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">login</i>
                     </div>
