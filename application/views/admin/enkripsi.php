@@ -196,8 +196,8 @@
             
             var es = findEncryptionKeys(l, n);
             document.getElementById("e").value = es[0];
-            // document.getElementById("enKeyListSpan").innerHTML = " Kunci enkripsi yang mungkin adalah: " + es;
-            // encryptorChanged();
+
+            encryptorChanged();
         }
 
         function encryptorChanged() {
@@ -207,10 +207,7 @@
             ds.splice(ds.indexOf(e), 1);  //remove encryption key from list
             d = ds[0];
             document.getElementById("d").value = d;
-            document.getElementById("deKeyListSpan").innerHTML = " Kunci dekripsi yang mungkin adalah: " + ds;
 
-            document.getElementById("public-key").innerHTML = "(" + e + "," + n + ")";
-            document.getElementById("private-key").innerHTML = "(" + d + "," + n + ")";
         }
 
         function decryptorChanged() {
