@@ -24,6 +24,30 @@
     <!-- Nepcha Analytics (nepcha.com) -->
     <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
     <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+    <style>
+    /* fallback */
+    @font-face {
+        font-family: 'Material Icons Round';
+        font-style: normal;
+        font-weight: 400;
+        src: url(<?=base_url('assets/icon/material.woff2')?>) format('woff2');
+    }
+
+    .material-icons-round {
+        font-family: 'Material Icons Round';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-smoothing: antialiased;
+    }
+    </style>
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
