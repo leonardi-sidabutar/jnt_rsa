@@ -45,6 +45,7 @@ class Admin extends CI_Controller {
 	public function enkripsi(){
 		$data['login'] = $this->db->get_where('tbl_login', ['username'=>$this->session->userdata('username')])->row_array();
 		$data['judul'] = 'Enkripsi';
+		$data['pengiriman'] = $this->Admin_model->getAllData();
 
 		$this->load->view('template/header',$data);
 		$this->load->view('template/sidebar');
