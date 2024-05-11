@@ -41,6 +41,18 @@ class Admin extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+
+	public function enkripsi(){
+		$data['login'] = $this->db->get_where('tbl_login', ['username'=>$this->session->userdata('username')])->row_array();
+		$data['judul'] = 'Enkripsi';
+
+		$this->load->view('template/header',$data);
+		$this->load->view('template/sidebar');
+		$this->load->view('admin/enkripsi');
+		$this->load->view('template/footer');
+	}
+
+
 	public function import_data() {
         // Memeriksa apakah file diunggah
         if ($_FILES['excel_file']['name']) {
