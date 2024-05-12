@@ -91,7 +91,7 @@ class Admin extends CI_Controller
 				}
 			}
 			// Jika Berhasil Import
-			$this->session->set_flashdata('message','
+			$this->session->set_flashdata('message', '
 				<div class="alert alert-success alert-dismissible text-white" role="alert">
 					<span class="text-sm"><a href="javascript:;" class="alert-link text-white">Info!</a> Data Berhasil DiImport</span>
 					<button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
@@ -100,9 +100,9 @@ class Admin extends CI_Controller
 				</div>
 			');
 			redirect('admin/pengiriman');
-        }else{
+		} else {
 			// Jika Gagal Import
-			$this->session->set_flashdata('message','
+			$this->session->set_flashdata('message', '
 				<div class="alert alert-warning alert-dismissible text-white" role="alert">
 					<span class="text-sm"><a href="javascript:;" class="alert-link text-white">Warning!</a> Data Gagal DiImport</span>
 					<button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
@@ -112,14 +112,15 @@ class Admin extends CI_Controller
 			');
 			redirect('admin/pengiriman');
 		}
-    }
+	}
 
-	public function delete($id){
+	public function delete($id)
+	{
 		$delete_row = $this->Admin_model->deleteData($id);
 
-		if($delete_row > 0){
+		if ($delete_row > 0) {
 			// Jika Berhasil Hapus Data
-			$this->session->set_flashdata('message','
+			$this->session->set_flashdata('message', '
 				<div class="alert alert-info alert-dismissible text-white" role="alert">
 					<span class="text-sm"><a href="javascript:;" class="alert-link text-white">Info!</a> Data Berhasil diHapus</span>
 					<button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
@@ -128,41 +129,43 @@ class Admin extends CI_Controller
 				</div>
 			');
 			redirect('admin/pengiriman');
-		}else{
+		} else {
 			echo "Gagal Delete Row Data";
 		}
 	}
 
-	public function form_pengiriman($id){
-		$data['login'] = $this->db->get_where('tbl_login', ['username'=>$this->session->userdata('username')])->row_array();
+	public function form_pengiriman($id)
+	{
+		$data['login'] = $this->db->get_where('tbl_login', ['username' => $this->session->userdata('username')])->row_array();
 		$data['judul'] = 'Form Pengiriman';
 		$data['row'] = $this->Admin_model->selectData($id);
-		
-		$this->load->view('template/header',$data);
+
+		$this->load->view('template/header', $data);
 		$this->load->view('template/sidebar');
-		$this->load->view('admin/form_pengiriman',$data);
-		$this->load->view('template/footer');		
+		$this->load->view('admin/form_pengiriman', $data);
+		$this->load->view('template/footer');
 	}
 
-	public function update(){
+	public function update()
+	{
 		$data_to_update = array(
-			'tanggal_pengiriman'=>date("Y-m-d", strtotime($_POST['date'])),
-			'kode_waybill'=>$_POST['waybill'],
-			'nama_pelanggan'=>$_POST['nama'],
-			'outlet_pengiriman'=>$_POST['outlet_pengiriman'],
-			'outlet_tujuan'=>$_POST['outlet_tujuan'],
-			'jumlah_paket'=>(int)$_POST['jumlah_paket'],
-			'metode_penyelesaian'=>$_POST['metode_penyelesaian'],
-			'volume_berat_paket'=>(int)$_POST['volume_berat'],
-			'biaya_kirim'=>(int)$_POST['biaya'],
-			'status_resi'=>$_POST['status'],
+			'tanggal_pengiriman' => date("Y-m-d", strtotime($_POST['date'])),
+			'kode_waybill' => $_POST['waybill'],
+			'nama_pelanggan' => $_POST['nama'],
+			'outlet_pengiriman' => $_POST['outlet_pengiriman'],
+			'outlet_tujuan' => $_POST['outlet_tujuan'],
+			'jumlah_paket' => (int)$_POST['jumlah_paket'],
+			'metode_penyelesaian' => $_POST['metode_penyelesaian'],
+			'volume_berat_paket' => (int)$_POST['volume_berat'],
+			'biaya_kirim' => (int)$_POST['biaya'],
+			'status_resi' => $_POST['status'],
 		);
-		$this->db->where('id',$_POST['id']);
-		$update = $this->db->update('tbl_pengiriman_barang',$data_to_update);
+		$this->db->where('id', $_POST['id']);
+		$update = $this->db->update('tbl_pengiriman_barang', $data_to_update);
 
-		if($update){
+		if ($update) {
 			// Jika Berhasil Hapus Data
-			$this->session->set_flashdata('message','
+			$this->session->set_flashdata('message', '
 				<div class="alert alert-info alert-dismissible text-white" role="alert">
 					<span class="text-sm"><a href="javascript:;" class="alert-link text-white">Info!</a> Data Berhasil Diubah</span>
 					<button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
@@ -170,9 +173,9 @@ class Admin extends CI_Controller
 					</button>
 				</div>
 			');
-		}else{
+		} else {
 			// Jika Berhasil Hapus Data
-			$this->session->set_flashdata('message','
+			$this->session->set_flashdata('message', '
 				<div class="alert alert-danger alert-dismissible text-white" role="alert">
 					<span class="text-sm"><a href="javascript:;" class="alert-link text-white">Info!</a> Data Gagal Diubah</span>
 					<button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
@@ -184,11 +187,10 @@ class Admin extends CI_Controller
 		redirect('admin/pengiriman');
 	}
 
-	public function select($id){
+	public function select($id)
+	{
 		$select = $this->db->get_where('tbl_pengiriman_barang', array('id' => $id))->row_array();
 		var_dump($select);
-	}
-		}
 	}
 
 	public function enkripsi_proses()
@@ -277,17 +279,13 @@ class Admin extends CI_Controller
 
 	public function deleteenkripsi()
 	{
-		$cek = $this->Enkripsi_model->kosongkan();
-		if ($cek) {
-			redirect('admin/enkripsi');
-		}
+		$this->Enkripsi_model->kosongkan();
+		redirect('admin/enkripsi');
 	}
 
 	public function deletedekripsi()
 	{
-		$cek = $this->Dekripsi_model->kosongkan();
-		if ($cek) {
-			redirect('admin/dekripsi');
-		}
+		$this->Dekripsi_model->kosongkan();
+		redirect('admin/dekripsi');
 	}
 }

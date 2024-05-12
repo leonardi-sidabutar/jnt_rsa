@@ -124,8 +124,7 @@
                                           </td>
                                           <td class="align-middle text-center">
                                               <span class="text-secondary text-xs font-weight-bold">Rp.
-                          <?= $row['biaya
-                                               _kirim'] ?></span>
+                          <?= $row['biaya_kirim'] ?></span>
                                           </td>
                                           <td class="align-middle text-center text-sm">
                                               <span class="badge badge-sm bg-gradient-success"><?= $row['status_resi'] ?></span>
