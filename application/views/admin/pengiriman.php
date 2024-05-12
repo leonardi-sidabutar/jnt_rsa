@@ -25,7 +25,8 @@
                         </a>
                     </li>
                     <li class="nav-item px-3 d-flex align-items-center">
-                        <span style="margin-right:10px"><?=$login['role']?></span>
+                        <i class="material-icons opacity-10">person</i>
+                        <span style="margin-left:5px"><?=$login['role']?></span>
                     </li>
                 </ul>
             </div>
@@ -47,6 +48,7 @@
                                 <button type="submit" class="btn btn-info">Import</button>
                             </div>
                         </form>
+                        <?=$this->session->flashdata('message');?>
                         <div class="bg-gradient-danger shadow-danger border-radius-lg pt-4 pb-3 mt-3">
                             <h6 class="text-white text-capitalize ps-3">Data Pengiriman Barang</h6>
                         </div>
@@ -131,8 +133,11 @@
                                         </td>
                                         <td class="align-middle text-center text-sm">
                                             <div class='d-flex' style="flex-direction:column">
-                                                <span class="badge badge-sm bg-gradient-warning mb-2">Edit</span>
-                                                <span class="badge badge-sm bg-gradient-danger">Delete</span>
+                                                <a href="<?php echo site_url('admin/form_pengiriman/'.$row['id']); ?>"
+                                                    class="badge badge-sm bg-gradient-warning mb-2">Edit</a>
+                                                <a href="<?php echo site_url('admin/delete/'.$row['id']); ?>"
+                                                    onclick="return confirm('Apakah Anda Yakin Menghapus data ini?')"
+                                                    class="badge badge-sm bg-gradient-danger mb-2">Delete</a>
                                             </div>
                                         </td>
                                     </tr>
@@ -147,5 +152,4 @@
                         </div>
                     </div>
                 </div>
-                </ div>
             </div>

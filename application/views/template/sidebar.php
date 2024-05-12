@@ -12,7 +12,7 @@
     <hr class="horizontal light mt-0 mb-2">
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
         <ul class="navbar-nav">
-			<li class="nav-item mt-3">
+            <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Navigasi</h6>
             </li>
             <li class="nav-item">
@@ -23,11 +23,12 @@
                     <span class="nav-link-text ms-1">Home</span>
                 </a>
             </li>
-			<li class="nav-item mt-3">
+            <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Data</h6>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white  <?=$judul==='pengiriman' ? 'active' : ''  ?>" href="<?=base_url('admin/pengiriman')?>">
+                <a class="nav-link text-white  <?=$judul==='pengiriman' ? 'active' : ''  ?>"
+                    href="<?=base_url('admin/pengiriman')?>">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">receipt_long</i>
                     </div>
@@ -35,7 +36,8 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white <?=$judul==='Enkripsi' ? 'active' : ''  ?>" href="<?=base_url('admin/enkripsi')?>">
+                <a class="nav-link text-white <?=$judul==='Enkripsi' ? 'active' : ''  ?>"
+                    href="<?=base_url('admin/enkripsi')?>">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">view_in_ar</i>
                     </div>
