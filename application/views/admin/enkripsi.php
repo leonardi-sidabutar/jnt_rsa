@@ -133,19 +133,19 @@
 
           <div class="border-bottom border-info mb-3"></div>
 
-          <form class="d-flex flex-row justify-content-start">
+          <form class="d-flex flex-row justify-content-start" action="<?=base_url('admin/enkripsi_proses')?>" method="post">
             <div class="d-flex flex-column justify-content-start ml-3 mr-3 pl-3">
               <div class="d-flex flex-row align-items-center">
                 <label for="" style="width:60px">Nilai P : </label>
                 <div class="input-group input-group-outline" style="width:100px;">
-                  <input id="p" type="text" class="form-control">
+                  <input id="p" name="p" type="text" class="form-control">
                 </div>
               </div>
 
               <div class="d-flex flex-row align-items-center">
                 <label class="" style="width:60px" for="">Nilai q : </label>
                 <div class="input-group input-group-outline" style="width:100px;">
-                  <input id="q" type="text" class="form-control">
+                  <input name="q" id="q" type="text" class="form-control">
                 </div>
               </div>
             </div>

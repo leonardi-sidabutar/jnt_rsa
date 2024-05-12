@@ -15,6 +15,7 @@ class Admin extends CI_Controller {
 		}
 		// Load Model
 		$this->load->model('Admin_model');
+		$this->load->model('Enkripsi_model');
 	}
 
 	public function index()
@@ -85,5 +86,49 @@ class Admin extends CI_Controller {
 			redirect('admin/pengiriman');
         }
     }
+
+	public function tes()
+	{
+		$rsa = new RsaDep(37,83);
+		$dbbaru = $rsa->dekripsi("2399,1759,775,2256,914,2334");
+		echo $dbbaru;
+	}
+
+	public function enkripsi_proses()
+	{
+		$kuncip = $_POST['p'];
+		$kunciq = $_POST['q'];
+		$rsa = new RsaDep($kuncip,$kunciq);
+		$databaru =  $this->Admin_model->getAllData();
+		foreach($databaru as $row){
+			$data_insert = array(
+				'tanggal_pengiriman'=>$rsa->enkripsi($row['tanggal_pengiriman']),
+				'kode_waybill'=>$rsa->enkripsi($row['kode_waybill']),
+				'nama_pelanggan'=>$rsa->enkripsi($row['nama_pelanggan']),
+				'outlet_pengiriman'=>$rsa->enkripsi($row['outlet_pengiriman']),
+				'outlet_tujuan'=>$rsa->enkripsi($row['outlet_tujuan']),
+				'jumlah_paket'=>$rsa->enkripsi($row['jumlah_paket']),
+				'metode_penyelesaian'=>$rsa->enkripsi($row['metode_penyelesaian']),
+				'volume_berat_paket'=>$rsa->enkripsi($row['volume_berat_paket']),
+				'biaya_kirim'=>$rsa->enkripsi($row['biaya_kirim']),
+				'status_resi'=>$rsa->enkripsi($row['status_resi']),
+			);
+			$this->Enkripsi_model->insertData($data_insert);
+		}
+		
+		
+	}
+
+	public function hasilenkripsi()
+	{
+		$data['login'] = $this->db->get_where('tbl_login', ['username'=>$this->session->userdata('username')])->row_array();
+		$data['judul'] = 'Hasil Enkripsi';
+		$data['pengiriman'] = $this->Admin_model->getAllData();
+
+		$this->load->view('template/header',$data);
+		$this->load->view('template/sidebar');
+		$this->load->view('admin/enkripsi');
+		$this->load->view('template/footer');
+	}
 
 }
