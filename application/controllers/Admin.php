@@ -112,12 +112,11 @@ class Admin extends CI_Controller
 			');
 			}
 			redirect('admin/pengiriman');
-		}
-    }
+	}
+
 
 	public function delete($id){
 		$delete_row = $this->Admin_model->deleteData($id);
-
 		if($delete_row > 0){
 			// Jika Berhasil Hapus Data
 			$this->session->set_flashdata('message','
@@ -133,6 +132,7 @@ class Admin extends CI_Controller
 			echo "Gagal Delete Row Data";
 		}
 	}
+
 
 	public function form_pengiriman($id){
 		$data['login'] = $this->db->get_where('tbl_login', ['username'=>$this->session->userdata('username')])->row_array();
@@ -189,8 +189,6 @@ class Admin extends CI_Controller
 		$select = $this->db->get_where('tbl_pengiriman_barang', array('id' => $id))->row_array();
 		var_dump($select);
 	}
-		}
-	}
 
 	public function enkripsi_proses()
 	{
@@ -216,6 +214,7 @@ class Admin extends CI_Controller
 		}
 		redirect('admin/hasilenkripsi');
 	}
+
 
 	public function hasilenkripsi()
 	{
@@ -291,4 +290,5 @@ class Admin extends CI_Controller
 			redirect('admin/dekripsi');
 		}
 	}
+
 }

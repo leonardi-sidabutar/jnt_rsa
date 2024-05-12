@@ -321,12 +321,7 @@
 
     <script>
       "use strict";
-
       let e, d, n, l;
-        <script>
-        "use strict";
-
-        let e, d, n, l;
 
       function validatePrime(prime, nameOfPrime) {
         if (!isPrime(prime)) {
@@ -535,10 +530,9 @@
       }
 
       // file
-    </script>
+  
         // calculates   base^exponent % modulus
-        functi
-        on powerMod(base, exponent, modulus) {
+        function powerMod(base, exponent, modulus) {
             if (modulus === 1) return 0;
             var result = 1;
             base = base % modulus;
