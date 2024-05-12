@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Enkripsi_model extends CI_Model
+class Dekripsi_model extends CI_Model
 {
 
     public function __construct()
@@ -13,7 +13,7 @@ class Enkripsi_model extends CI_Model
     public function getAllData()
     {
         // Query untuk mengambil semua data dari tabel
-        $query = $this->db->get('enkripsi_pengiriman');
+        $query = $this->db->get('dekripsi_pengiriman');
         // Mengembalikan hasil query dalam bentuk array
         return $query->result_array();
     }
@@ -22,15 +22,16 @@ class Enkripsi_model extends CI_Model
     public function insertData($data)
     {
         // Masukkan data ke dalam tabel database
-        $this->db->insert('enkripsi_pengiriman', $data);
+        $this->db->insert('dekripsi_pengiriman', $data);
     }
+
     public function kosongkan()
     {
-        $this->db->truncate('enkripsi_pengiriman');
+        $this->db->truncate('dekripsi_pengiriman');
     }
     public function hitungtotal()
     {
-        $query = $this->db->get('enkripsi_pengiriman');
+        $query = $this->db->get('dekripsi_pengiriman');
         return $query->num_rows();
     }
 }

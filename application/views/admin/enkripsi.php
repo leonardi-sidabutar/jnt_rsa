@@ -1,3 +1,5 @@
+
+
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
   <!-- Navbar -->
   <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
@@ -133,19 +135,19 @@
 
           <div class="border-bottom border-info mb-3"></div>
 
-          <form class="d-flex flex-row justify-content-start" action="<?=base_url('admin/enkripsi_proses')?>" method="post">
+          <form class="d-flex flex-row justify-content-start" action="<?= base_url('admin/enkripsi_proses') ?>" method="post">
             <div class="d-flex flex-column justify-content-start ml-3 mr-3 pl-3">
               <div class="d-flex flex-row align-items-center">
                 <label for="" style="width:60px">Nilai P : </label>
                 <div class="input-group input-group-outline" style="width:100px;">
-                  <input id="p" name="p" type="text" class="form-control">
+                  <input required id="p" name="p" type="text" class="form-control">
                 </div>
               </div>
 
               <div class="d-flex flex-row align-items-center">
                 <label class="" style="width:60px" for="">Nilai q : </label>
                 <div class="input-group input-group-outline" style="width:100px;">
-                  <input name="q" id="q" type="text" class="form-control">
+                  <input required name="q" id="q" type="text" class="form-control">
                 </div>
               </div>
             </div>
@@ -172,7 +174,10 @@
               </div>
               <div class="d-flex flex-row">
                 <a class="btn bg-gradient-primary m-3" onclick="calculate()" type="button">Kunci</a>
-                <a class="btn bg-gradient-primary m-3" href="" type="button">Enkripsi</a>
+                <button class="btn bg-gradient-primary m-3" type="submit" type="button">Enkripsi</button>
+                <?php if ($total != 0) : ?>
+                  <a href="<?= base_url('admin/hasilenkripsi') ?>" class="btn bg-gradient-secondary m-3" type="button">Lihat Hasil Enkripsi</a>
+                <?php endif ?>
               </div>
 
             </div>
