@@ -84,7 +84,7 @@
                                 <input type="text" class="form-control" value="<?=$row['volume_berat_paket']?>"
                                     name="volume_berat">
                             </div>
-                            <label class="form-label">Volumen Biaya Kirim</label>
+                            <label class="form-label">Biaya Kirim</label>
                             <div class="input-group input-group-outline mb-3">
                                 <input type="text" class="form-control" value="<?=$row['biaya_kirim']?>" name="biaya">
                             </div>

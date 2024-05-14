@@ -44,7 +44,7 @@
                         <div class="row">
                             <div class="col-lg-8" style='display:flex;align-items:center'>
                                 <span style="font-size:28px;color:#555555;line-height:1.5em;" class="mb-0 "
-                                    align="center">Penerapan Kriptorafi Pengamanan Data Pengiriman Barang Di J&T Cargo
+                                    align="center">Penerapan Kriptografi Pengamanan Data Pengiriman Barang Di J&T Cargo
                                     Padang Bulan Medan Menggunakan Metode <i>RSA (Rivest Shamir Adleman)</i></span>
                             </div>
                             <div class="col-lg-4" style='display:flex;align-items:center'>

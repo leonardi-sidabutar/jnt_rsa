@@ -75,8 +75,6 @@
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
                                             Volume<br>Berat Paket<br>(Kg)</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-                                            Volume<br>Biaya Kirim<br>(Rp)</th>
-                                        <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
                                             Jumlah<br>Biaya Kirim</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
                                             Status<br>Resi</th>
@@ -118,10 +116,6 @@
                                         <td class="align-middle text-center">
                                             <span
                                                 class="text-secondary text-xs font-weight-bold"><?=$row['volume_berat_paket']?></span>
-                                        </td>
-                                        <td class="align-middle text-center">
-                                            <span class="text-secondary text-xs font-weight-bold">Rp.
-                                                <?=$row['biaya_kirim']?></span>
                                         </td>
                                         <td class="align-middle text-center">
                                             <span class="text-secondary text-xs font-weight-bold">Rp.
