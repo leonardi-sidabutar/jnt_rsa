@@ -75,7 +75,7 @@
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
                                             Volume<br>Berat Paket<br>(Kg)</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-                                            Jumlah<br>Biaya Kirim</th>
+                                            Jumlah<br>Biaya Kirim (Rp.)</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
                                             Status<br>Resi</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
