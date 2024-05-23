@@ -54,37 +54,24 @@
                                 <thead>
                                     <tr>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-                      
                                             Tanggal<br>Pengiriman</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-                      
                                             Kode<br>Waybill</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-                      
                                             Nama<br>Pelanggan</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-                      
                                             Outlet<br>Pengiriman</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-                      
                                             Outlet<br>Tujuan</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-                      
                                             Jumlah<br>Paket</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-                      
                                             Metode<br>Penyelesaian</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-                      
                                             Volume<br>Berat Paket<br>(Kg)</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-                      
-                                            Volume<br>Biaya Kirim<br>(Rp)</th>
+                                            Jumlah<br>Biaya Kirim (Rp)</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-                      
-                                            Jumlah<br>Biaya Kirim</th>
-                                        <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-                      
                                             Status<br>Resi</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
                       
@@ -117,10 +104,6 @@
                                           </td>
                                           <td class="align-middle text-center">
                                               <span class="text-secondary text-xs font-weight-bold"><?= $row['volume_berat_paket'] ?></span>
-                                          </td>
-                                          <td class="align-middle text-center">
-                                              <span class="text-secondary text-xs font-weight-bold">Rp.
-                          <?= $row['biaya_kirim'] ?></span>
                                           </td>
                                           <td class="align-middle text-center">
                                               <span class="text-secondary text-xs font-weight-bold">Rp.
