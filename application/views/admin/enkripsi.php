@@ -37,7 +37,7 @@
     <!-- End Navbar -->
     <div class="container-fluid py-4">
         <div class="mb-3" ntyle='margin-left:30px;'>
-            <span style="font-weight:bold;font-size:18px;color:#555555">Selamat Datang Di Aplikasi <i>RSA</i></span>
+            <span style="font-weight:bold;font-size:18px;color:#555555">Selamat Datang Di Website <i>RSA</i></span>
         </div>
         <div class="row">
             <div class="col-12">
