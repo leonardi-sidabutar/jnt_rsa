@@ -87,6 +87,13 @@ class Auth extends CI_Controller {
 			];
 			redirect('admin');
 		}
+
+		// $data = [
+		// 	"username"=>'desmi',
+		// 	"password"=>password_hash("desmi123",PASSWORD_DEFAULT)
+		// ];
+
+		// $this->db->insert('tbl_login', $data);
 	}
 
 	public function logout(){
