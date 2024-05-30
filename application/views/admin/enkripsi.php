@@ -1,5 +1,3 @@
-
-
 <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
@@ -74,52 +72,61 @@
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
                                             Status<br>Resi</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-                      
+
                                             Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                  <?php foreach ($pengiriman as $row) : ?>
-                                      <tr>
-                                          <td class="align-middle text-center">
-                                              <span class="text-secondary text-xs font-weight-bold"><?= $row['tanggal_pengiriman'] ?></span>
-                                          </td>
-                                          <td class="align-middle text-center">
-                                              <span class="text-secondary text-xs font-weight-bold"><?= $row['kode_waybill'] ?></span>
-                                          </td>
-                                          <td class="align-middle text-center">
-                                              <span class="text-secondary text-xs font-weight-bold"><?= $row['nama_pelanggan'] ?></span>
-                                          </td>
-                                          <td class="align-middle text-center">
-                                              <span class="text-secondary text-xs font-weight-bold"><?= $row['outlet_pengiriman'] ?></span>
-                                          </td>
-                                          <td class="align-middle text-center">
-                                              <span class="text-secondary text-xs font-weight-bold"><?= $row['outlet_tujuan'] ?></span>
-                                          </td>
-                                          <td class="align-middle text-center">
-                                              <span class="text-secondary text-xs font-weight-bold"><?= $row['jumlah_paket'] ?></span>
-                                          </td>
-                                          <td class="align-middle text-center">
-                                              <span class="text-secondary text-xs font-weight-bold"><?= $row['metode_penyelesaian'] ?></span>
-                                          </td>
-                                          <td class="align-middle text-center">
-                                              <span class="text-secondary text-xs font-weight-bold"><?= $row['volume_berat_paket'] ?></span>
-                                          </td>
-                                          <td class="align-middle text-center">
-                                              <span class="text-secondary text-xs font-weight-bold">Rp.
-                          <?= $row['biaya_kirim'] ?></span>
-                                          </td>
-                                          <td class="align-middle text-center text-sm">
-                                              <span class="badge badge-sm bg-gradient-success"><?= $row['status_resi'] ?></span>
-                                          </td>
-                                          <td class="align-middle text-center text-sm">
-                                              <div class='d-flex' style="flex-direction:column">
-                                                  <span class="badge badge-sm bg-gradient-warning mb-2">Edit</span>
-                                                  <span class="badge badge-sm bg-gradient-danger">Delete</span>
-                                              </div>
-                                          </td>
-                                      </tr>
-                  <?php endforeach; ?>
+                                    <?php foreach ($pengiriman as $row) : ?>
+                                    <tr>
+                                        <td class="align-middle text-center">
+                                            <span
+                                                class="text-secondary text-xs font-weight-bold"><?= $row['tanggal_pengiriman'] ?></span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span
+                                                class="text-secondary text-xs font-weight-bold"><?= $row['kode_waybill'] ?></span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span
+                                                class="text-secondary text-xs font-weight-bold"><?= $row['nama_pelanggan'] ?></span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span
+                                                class="text-secondary text-xs font-weight-bold"><?= $row['outlet_pengiriman'] ?></span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span
+                                                class="text-secondary text-xs font-weight-bold"><?= $row['outlet_tujuan'] ?></span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span
+                                                class="text-secondary text-xs font-weight-bold"><?= $row['jumlah_paket'] ?></span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span
+                                                class="text-secondary text-xs font-weight-bold"><?= $row['metode_penyelesaian'] ?></span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span
+                                                class="text-secondary text-xs font-weight-bold"><?= $row['volume_berat_paket'] ?></span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                            <span class="text-secondary text-xs font-weight-bold">Rp.
+                                                <?= $row['biaya_kirim'] ?></span>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <span
+                                                class="badge badge-sm bg-gradient-success"><?= $row['status_resi'] ?></span>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            <div class='d-flex' style="flex-direction:column">
+                                                <span class="badge badge-sm bg-gradient-warning mb-2">Edit</span>
+                                                <span class="badge badge-sm bg-gradient-danger">Delete</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
@@ -128,13 +135,14 @@
                 <!-- card baru -->
                 <br>
                 <div class="card">
-                    <h6 class="mt-2 text-capitalize ps-3">Kunci Public Key</h6>
+                    <h6 class="mt-2 text-capitalize ps-3">Kunci Private Key</h6>
                     <!-- batas form  -->
 
                     <div class="border-bottom border-info mb-3"></div>
 
-                    <form class="d-flex flex-row justify-content-start" action="<?= base_url('admin/enkripsi_proses') ?>" method="post">
-                        <div class="d-flex flex-column justify-content-start ml-3 mr-3 pl-3">
+                    <form class="d-flex flex-row justify-content-start"
+                        action="<?= base_url('admin/enkripsi_proses') ?>" method="post">
+                        <div class="d-flex flex-column justify-content-start ml-3 mr-3 pl-3 gap-2">
                             <div class="d-flex flex-row align-items-center">
                                 <label for="" style="width:60px">Nilai P : </label>
                                 <div class="input-group input-group-outline" style="width:100px;">
@@ -152,7 +160,7 @@
                         <div style="width: 20px;" class="ml-3 mr-3">
                         </div>
                         <div class="d-flex flex-column">
-                            <div class="d-flex flex-row">
+                            <div class="d-flex flex-row gap-3">
                                 <div class="input-group input-group-outline is-filled">
                                     <label class="form-label">Nilai N</label>
                                     <input id="n" type="text" class="form-control">
@@ -172,10 +180,12 @@
                             </div>
                             <div class="d-flex flex-row">
                                 <a class="btn bg-gradient-primary m-3" onclick="calculate()" type="button">Kunci</a>
-                                <button class="btn bg-gradient-primary m-3" type="submit" type="button">Enkripsi</button>
-                <?php if ($total != 0) : ?>
-                  <a href="<?= base_url('admin/hasilenkripsi') ?>" class="btn bg-gradient-secondary m-3" type="button">Lihat Hasil Enkripsi</a>
-                <?php endif ?>
+                                <button class="btn bg-gradient-primary m-3" type="submit"
+                                    type="button">Enkripsi</button>
+                                <?php if ($total != 0) : ?>
+                                <a href="<?= base_url('admin/hasilenkripsi') ?>" class="btn bg-gradient-secondary m-3"
+                                    type="button">Lihat Hasil Enkripsi</a>
+                                <?php endif ?>
                             </div>
 
                         </div>
@@ -186,71 +196,71 @@
             </div>
         </div>
 
-    <script>
+        <script>
         "use strict";
-        
+
         let e, d, n, l;
 
         function validatePrime(prime, nameOfPrime) {
-            if(!isPrime(prime)) {
+            if (!isPrime(prime)) {
                 alert("'" + nameOfPrime + "' Bukan Bilangan Prima. Masukkan Bilangan Prima.");
                 return false;
             }
-            if(prime <= 1) {
+            if (prime <= 1) {
                 alert("'" + nameOfPrime + "' Harus Bilangan Prima .");
                 return false;
             }
             return true;
         }
-        
-        function calculate() {            
+
+        function calculate() {
             var p = document.getElementById("p").value;
             var q = document.getElementById("q").value;
-            if (!(validatePrime(p, "p") && validatePrime(q, "q"))) return; 
+            if (!(validatePrime(p, "p") && validatePrime(q, "q"))) return;
             n = p * q;
             document.getElementById("n").value = n;
-            
+
             l = (p - 1) * (q - 1);
             document.getElementById("l").value = l;
-            
+
             var es = findEncryptionKeys(l, n);
             document.getElementById("e").value = es[0];
 
-        encryptorChanged();
-      }
+            encryptorChanged();
+        }
 
         function encryptorChanged() {
-            e = document.getElementById("e").value;            
+            e = document.getElementById("e").value;
 
             var ds = findDecryptionKeys(e, l);
-            ds.splice(ds.indexOf(e), 1);  //remove encryption key from list
+            ds.splice(ds.indexOf(e), 1); //remove encryption key from list
             d = ds[0];
             document.getElementById("d").value = d;
 
-      }
+        }
 
-      function decryptorChanged() {
-        d = document.getElementById("d").value;
-        document.getElementById("privat-key").innerHTML = "(" + d + "," + n + ")";
-      }
+        function decryptorChanged() {
+            d = document.getElementById("d").value;
+            document.getElementById("privat-key").innerHTML = "(" + d + "," + n + ")";
+        }
 
-      function isPrime(num) {
-        for (let i = 2, s = Math.sqrt(num); i <= s; i++)
-          if (num % i === 0) return false;
-        return num !== 1;
-      }
+        function isPrime(num) {
+            for (let i = 2, s = Math.sqrt(num); i <= s; i++)
+                if (num % i === 0) return false;
+            return num !== 1;
+        }
 
         function findEncryptionKeys(l, n) {
             var arr = [];
-            for(var i = 2; i < l; i++) {
-                if(isCoPrime(i, l) && isCoPrime(i, n))
+            for (var i = 2; i < l; i++) {
+                if (isCoPrime(i, l) && isCoPrime(i, n))
                     arr.push(i);
-                    if(arr.length > 5) break;
-            }     
+                if (arr.length > 5) break;
+            }
             return arr;
         }
 
-        function isCoPrime(a, b) {            
+        function isCoPrime(a, b) {
             var aFac = findFactors(a);
             var bFac = findFactors(b);
             var result = aFac.every(x => bFac.indexOf(x) < 0);
@@ -258,60 +268,61 @@
         }
 
         var hashtable = new Object();
+
         function findFactors(num) {
-            if(hashtable[num])
+            if (hashtable[num])
                 return hashtable[num];
 
-        var half = Math.floor(num / 2), // Ensures a whole number <= num.
-          result = [],
-          i, j;
+            var half = Math.floor(num / 2), // Ensures a whole number <= num.
+                result = [],
+                i, j;
 
-                //result.push(1); // 1 should be a part of every solution but for our purpose of COPRIME 1 should be excluded
+            //result.push(1); // 1 should be a part of every solution but for our purpose of COPRIME 1 should be excluded
 
-        // Determine out increment value for the loop and starting point.
-        num % 2 === 0 ? (i = 2, j = 1) : (i = 3, j = 2);
+            // Determine out increment value for the loop and starting point.
+            num % 2 === 0 ? (i = 2, j = 1) : (i = 3, j = 2);
 
-        for (i; i <= half; i += j) {
-          num % i === 0 ? result.push(i) : false;
+            for (i; i <= half; i += j) {
+                num % i === 0 ? result.push(i) : false;
+            }
+
+            result.push(num); // Always include the original number.
+            hashtable[num] = result;
+            return result;
         }
-
-        result.push(num); // Always include the original number.
-        hashtable[num] = result;
-        return result;
-      }
 
         function findDecryptionKeys(e, l) {
             var ds = [];
-            for(var x = l + 1;x < l + 100000; x++) {
-                if(x * e % l === 1) {
+            for (var x = l + 1; x < l + 100000; x++) {
+                if (x * e % l === 1) {
                     ds.push(x);
-                    if(ds.length > 5)   return ds;
+                    if (ds.length > 5) return ds;
                 }
-            }     
+            }
             return ds;
         }
 
         function encrypt() {
             var m = document.getElementById("message").value;
             var ascii = Array.from(Array(m.length).keys()).map(i => m.charCodeAt(i));
-            document.getElementById("ascii").innerHTML = ascii;         
-            var encrypted = ascii.map(i => powerMod(i, e, n));   
+            document.getElementById("ascii").innerHTML = ascii;
+            var encrypted = ascii.map(i => powerMod(i, e, n));
             document.getElementById("encrypted-msg").innerHTML = encrypted;
             document.getElementById("encrypted-msg-textbox").value = encrypted;
         }
 
-      function decrypt() {
-        var cipher = stringToNumberArray(document.getElementById("encrypted-msg-textbox").value);
-        var ascii = cipher.map(i => powerMod(i, d, n));
-        document.getElementById("ascii-decrypted").innerHTML = ascii;
-        var message = "";
-        ascii.map(x => message += String.fromCharCode(x));
-        document.getElementById("decrypted-msg").innerHTML = message;
-      }
+        function decrypt() {
+            var cipher = stringToNumberArray(document.getElementById("encrypted-msg-textbox").value);
+            var ascii = cipher.map(i => powerMod(i, d, n));
+            document.getElementById("ascii-decrypted").innerHTML = ascii;
+            var message = "";
+            ascii.map(x => message += String.fromCharCode(x));
+            document.getElementById("decrypted-msg").innerHTML = message;
+        }
 
-      function stringToNumberArray(str) {
-        return str.split(",").map(i => parseInt(i));
-      }
+        function stringToNumberArray(str) {
+            return str.split(",").map(i => parseInt(i));
+        }
 
         // calculates   base^exponent % modulus
         function powerMod(base, exponent, modulus) {
@@ -319,15 +330,13 @@
             var result = 1;
             base = base % modulus;
             while (exponent > 0) {
-                if (exponent % 2 === 1)  //odd number
+                if (exponent % 2 === 1) //odd number
                     result = (result * base) % modulus;
                 exponent = exponent >> 1; //divide by 2
                 base = (base * base) % modulus;
             }
             return result;
-        }       
-        
-// file
+        }
 
-
-    </script> 
+        // file
+        </script>
