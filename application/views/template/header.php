@@ -14,6 +14,7 @@
     <!-- Nucleo Icons -->
     <link href="<?=base_url('assets')?>/assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="<?=base_url('assets')?>/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="<?=base_url('assets')?>/datatabel/datatabel.min.css" rel="stylesheet" />
     <link rel="shortcut icon" href="<?=base_url('assets')?>/img/jnt_icon.ico" type="image/x-icon">
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>

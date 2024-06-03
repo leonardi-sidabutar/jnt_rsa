@@ -55,7 +55,7 @@
                     </div>
                     <div class="card-footer px-0 pb-2">
                         <div class="table-responsive p-0">
-                            <table class="table align-items-center mb-0">
+                            <table id="myTable" class="table align-items-center mb-0">
                                 <thead>
                                     <tr>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
