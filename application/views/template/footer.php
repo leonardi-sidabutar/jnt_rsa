@@ -13,8 +13,10 @@
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="<?= base_url('assets') ?>/assets/js/material-dashboard.min.js?v=3.1.0"></script>
 <script>
-    $(document).ready(function(){
-        $('#tabel-data').DataTable();
+    new DataTable('#myTable', {
+        buttons: [
+            'csv', 'excel', 'print'
+        ],
     });
 </script>
 </body>

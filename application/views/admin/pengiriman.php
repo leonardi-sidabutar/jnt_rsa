@@ -55,7 +55,7 @@
                     </div>
                     <div class="card-footer px-0 pb-2">
                         <div class="table-responsive p-0">
-                            <table id="myTable" class="table align-items-center mb-0">
+                            <table id="" class="table align-items-center mb-0">
                                 <thead>
                                     <tr>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
@@ -142,7 +142,7 @@
                     </div>
                     <div class="card-header p-0 position-relative mx-3 z-index-2">
                         <div class='mt-3 text-sm' style="color:black">
-                            <button type="button" class="btn btn-success">Export</button>
+                            <a href="<?=base_url('admin/eksporexcel')?>" type="button" class="btn btn-success">Export</a>
                         </div>
                     </div>
                 </div>
