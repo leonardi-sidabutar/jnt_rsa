@@ -37,7 +37,7 @@ class Auth extends CI_Controller {
 				// Jika Password Benar
 				$data = [
 					'username'=>$login['username'],
-					'role'=>$login['role']
+					'role'=>'Admin'
 				];
 				$this->session->set_userdata($data);
 				redirect('admin');

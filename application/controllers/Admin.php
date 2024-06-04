@@ -24,7 +24,7 @@ class Admin extends CI_Controller
 
 	public function index()
 	{
-		$data['login'] = $this->db->get_where('tbl_login', ['username' => $this->session->userdata('username')])->row_array();
+		$data['login'] = $this->session->userdata();
 		$data['judul'] = 'home';
 
 		$this->load->view('template/header', $data);
@@ -36,7 +36,7 @@ class Admin extends CI_Controller
 
 	public function pengiriman()
 	{
-		$data['login'] = $this->db->get_where('tbl_login', ['username' => $this->session->userdata('username')])->row_array();
+		$data['login'] = $this->session->userdata();
 		$data['judul'] = 'pengiriman';
 		// Memanggil metode getAllData dari model Example_model untuk mendapatkan semua data
 		$data['pengiriman'] = $this->Admin_model->getAllData();
@@ -50,7 +50,7 @@ class Admin extends CI_Controller
 
 	public function enkripsi()
 	{
-		$data['login'] = $this->db->get_where('tbl_login', ['username' => $this->session->userdata('username')])->row_array();
+		$data['login'] = $this->session->userdata();
 		$data['judul'] = 'Enkripsi';
 		$data['pengiriman'] = $this->Admin_model->getAllData();
 		$data['total'] = $this->Enkripsi_model->hitungtotal();
@@ -136,7 +136,7 @@ class Admin extends CI_Controller
 
 	public function form_pengiriman($id)
 	{
-		$data['login'] = $this->db->get_where('tbl_login', ['username' => $this->session->userdata('username')])->row_array();
+		$data['login'] = $this->session->userdata();
 		$data['judul'] = 'Form Pengiriman';
 		$data['row'] = $this->Admin_model->selectData($id);
 
@@ -220,7 +220,7 @@ class Admin extends CI_Controller
 
 	public function hasilenkripsi()
 	{
-		$data['login'] = $this->db->get_where('tbl_login', ['username' => $this->session->userdata('username')])->row_array();
+		$data['login'] = $this->session->userdata();
 		$data['judul'] = 'Enkripsi';
 		$data['pengiriman'] = $this->Enkripsi_model->getAllData();
 		$this->load->view('template/header', $data);
@@ -231,7 +231,7 @@ class Admin extends CI_Controller
 
 	public function dekripsi()
 	{
-		$data['login'] = $this->db->get_where('tbl_login', ['username' => $this->session->userdata('username')])->row_array();
+		$data['login'] = $this->session->userdata();
 		$data['judul'] = 'Dekripsi';
 		$data['pengiriman'] = $this->Enkripsi_model->getAllData();
 		$data['total'] = $this->Dekripsi_model->hitungtotal();
@@ -268,7 +268,7 @@ class Admin extends CI_Controller
 
 	public function hasildekripsi()
 	{
-		$data['login'] = $this->db->get_where('tbl_login', ['username' => $this->session->userdata('username')])->row_array();
+		$data['login'] = $this->session->userdata();
 		$data['judul'] = 'Dekripsi';
 		$data['pengiriman'] = $this->Dekripsi_model->getAllData();
 		$this->load->view('template/header', $data);
