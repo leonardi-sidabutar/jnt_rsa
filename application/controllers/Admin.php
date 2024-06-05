@@ -288,4 +288,13 @@ class Admin extends CI_Controller
 		$this->Dekripsi_model->kosongkan();
 		redirect('admin/dekripsi');
 	}
+<<<<<<< HEAD
 }
+=======
+	public function eksporexcel()
+	{
+		$data['pengiriman'] = $this->Admin_model->getAllData();
+		$this->load->view('admin/export',$data);
+	}
+}
+>>>>>>> 71c207d6370cb7e5e73f17202d0fcfa0e3db592c
