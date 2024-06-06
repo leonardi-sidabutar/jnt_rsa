@@ -122,8 +122,8 @@
             <div class="d-flex flex-row">
               <a href="<?=base_url('admin/dekripsi')?>" class="btn bg-gradient-secondary m-3">Kembali</a>
               <a href="<?=base_url('admin/deletedekripsi')?>" class="btn bg-gradient-primary m-3">Kosongkan Tabel</a>
+              <a href="<?=base_url('admin/eksporexcelhasildek')?>" class="btn bg-gradient-primary m-3">Export</a>
             </div>
-
           </div>
           <!-- batas form -->
         </div>
