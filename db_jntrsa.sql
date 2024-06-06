@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 12 Bulan Mei 2024 pada 10.45
--- Versi server: 10.4.28-MariaDB
--- Versi PHP: 8.1.17
+-- Host: 127.0.0.1:3306
+-- Waktu pembuatan: 06 Jun 2024 pada 02.13
+-- Versi server: 8.2.0
+-- Versi PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,18 +27,19 @@ SET time_zone = "+00:00";
 -- Struktur dari tabel `dekripsi_pengiriman`
 --
 
-CREATE TABLE `dekripsi_pengiriman` (
-  `id` int(11) NOT NULL DEFAULT 0,
-  `tanggal_pengiriman` text NOT NULL,
-  `nama_pelanggan` text NOT NULL,
-  `outlet_pengiriman` text NOT NULL,
-  `jumlah_paket` text NOT NULL,
-  `metode_penyelesaian` text NOT NULL,
-  `volume_berat_paket` text NOT NULL,
-  `biaya_kirim` text NOT NULL,
-  `kode_waybill` text NOT NULL,
-  `outlet_tujuan` text NOT NULL,
-  `status_resi` text NOT NULL
+DROP TABLE IF EXISTS `dekripsi_pengiriman`;
+CREATE TABLE IF NOT EXISTS `dekripsi_pengiriman` (
+  `id` int NOT NULL DEFAULT '0',
+  `tanggal_pengiriman` text COLLATE utf8mb4_general_ci NOT NULL,
+  `nama_pelanggan` text COLLATE utf8mb4_general_ci NOT NULL,
+  `outlet_pengiriman` text COLLATE utf8mb4_general_ci NOT NULL,
+  `jumlah_paket` text COLLATE utf8mb4_general_ci NOT NULL,
+  `metode_penyelesaian` text COLLATE utf8mb4_general_ci NOT NULL,
+  `volume_berat_paket` text COLLATE utf8mb4_general_ci NOT NULL,
+  `biaya_kirim` text COLLATE utf8mb4_general_ci NOT NULL,
+  `kode_waybill` text COLLATE utf8mb4_general_ci NOT NULL,
+  `outlet_tujuan` text COLLATE utf8mb4_general_ci NOT NULL,
+  `status_resi` text COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -47,18 +48,19 @@ CREATE TABLE `dekripsi_pengiriman` (
 -- Struktur dari tabel `enkripsi_pengiriman`
 --
 
-CREATE TABLE `enkripsi_pengiriman` (
-  `id` int(11) NOT NULL DEFAULT 0,
-  `tanggal_pengiriman` text NOT NULL,
-  `nama_pelanggan` text NOT NULL,
-  `outlet_pengiriman` text NOT NULL,
-  `jumlah_paket` text NOT NULL,
-  `metode_penyelesaian` text NOT NULL,
-  `volume_berat_paket` text NOT NULL,
-  `biaya_kirim` text NOT NULL,
-  `kode_waybill` text NOT NULL,
-  `outlet_tujuan` text NOT NULL,
-  `status_resi` text NOT NULL
+DROP TABLE IF EXISTS `enkripsi_pengiriman`;
+CREATE TABLE IF NOT EXISTS `enkripsi_pengiriman` (
+  `id` int NOT NULL DEFAULT '0',
+  `tanggal_pengiriman` text COLLATE utf8mb4_general_ci NOT NULL,
+  `nama_pelanggan` text COLLATE utf8mb4_general_ci NOT NULL,
+  `outlet_pengiriman` text COLLATE utf8mb4_general_ci NOT NULL,
+  `jumlah_paket` text COLLATE utf8mb4_general_ci NOT NULL,
+  `metode_penyelesaian` text COLLATE utf8mb4_general_ci NOT NULL,
+  `volume_berat_paket` text COLLATE utf8mb4_general_ci NOT NULL,
+  `biaya_kirim` text COLLATE utf8mb4_general_ci NOT NULL,
+  `kode_waybill` text COLLATE utf8mb4_general_ci NOT NULL,
+  `outlet_tujuan` text COLLATE utf8mb4_general_ci NOT NULL,
+  `status_resi` text COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -85,19 +87,21 @@ INSERT INTO `enkripsi_pengiriman` (`id`, `tanggal_pengiriman`, `nama_pelanggan`,
 -- Struktur dari tabel `tbl_login`
 --
 
-CREATE TABLE `tbl_login` (
-  `id` int(11) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `password` text NOT NULL,
-  `role` varchar(20) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+DROP TABLE IF EXISTS `tbl_login`;
+CREATE TABLE IF NOT EXISTS `tbl_login` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `password` text COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `tbl_login`
 --
 
-INSERT INTO `tbl_login` (`id`, `username`, `password`, `role`) VALUES
-(1, 'admin', '$2y$10$l6DTnLT9rK5Xjb2d8.Zu7e.uyhrl2h6YuGvZkdkOQr3o.bzMQTqd.', 'Admin');
+INSERT INTO `tbl_login` (`id`, `username`, `password`) VALUES
+(1, 'admin', '$2y$10$l6DTnLT9rK5Xjb2d8.Zu7e.uyhrl2h6YuGvZkdkOQr3o.bzMQTqd.'),
+(2, 'desmi', '$2y$10$Ut2MF6fBQkldafqevOEoN.4IfLqG5c5Ibac24wFdglPGAK62bQsq.');
 
 -- --------------------------------------------------------
 
@@ -105,19 +109,21 @@ INSERT INTO `tbl_login` (`id`, `username`, `password`, `role`) VALUES
 -- Struktur dari tabel `tbl_pengiriman_barang`
 --
 
-CREATE TABLE `tbl_pengiriman_barang` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `tbl_pengiriman_barang`;
+CREATE TABLE IF NOT EXISTS `tbl_pengiriman_barang` (
+  `id` int NOT NULL AUTO_INCREMENT,
   `tanggal_pengiriman` date NOT NULL,
-  `nama_pelanggan` varchar(100) NOT NULL,
-  `outlet_pengiriman` varchar(100) NOT NULL,
-  `jumlah_paket` int(11) NOT NULL,
-  `metode_penyelesaian` varchar(50) NOT NULL,
-  `volume_berat_paket` int(11) NOT NULL,
-  `biaya_kirim` int(11) NOT NULL,
-  `kode_waybill` varchar(50) NOT NULL,
-  `outlet_tujuan` varchar(100) NOT NULL,
-  `status_resi` varchar(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `nama_pelanggan` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `outlet_pengiriman` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `jumlah_paket` int NOT NULL,
+  `metode_penyelesaian` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `volume_berat_paket` int NOT NULL,
+  `biaya_kirim` int NOT NULL,
+  `kode_waybill` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `outlet_tujuan` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `status_resi` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `tbl_pengiriman_barang`
@@ -129,44 +135,7 @@ INSERT INTO `tbl_pengiriman_barang` (`id`, `tanggal_pengiriman`, `nama_pelanggan
 (16, '2022-07-02', 'LINA TARIGAN', 'MES018B', 1, 'TUNAI', 22, 376700, '200053461633', 'JKT001A', 'PAKET SEDANG TRANSIT'),
 (17, '2022-07-02', 'CHELSEA', 'MES018B', 1, 'DFOD', 8, 117476, '200053396761', 'KOE003A', 'PAKET SEDANG BERADA DI GUDANG'),
 (18, '2022-07-02', 'APRIL GINTING', 'MES018B', 2, 'TUNAI', 8, 145000, '200053385260', 'TGR038A', 'PAKET SUDAH DITERIMA'),
-(19, '2022-07-02', 'MEGAWATI LAIA ', 'MES018B', 2, 'TUNAI', 19, 457370, '200053100094', 'TED001J', 'PAKET SEDANG BERADA DI GUDANG'),
-(20, '2022-07-02', 'ALVARO GAVRIEL', 'MES018B', 1, 'DFOD', 10, 208940, '200053467958', 'PKY001A', 'PAKET SEDANG TRANSIT'),
-(21, '2022-07-03', 'ERIANTA', 'MES018B', 1, 'TUNAI', 8, 68700, '200053533193', 'TKO001J', 'PAKET SEDANG DALAM PERJALANAN'),
-(22, '2022-07-05', 'MAY AQUINO', 'MES018B', 1, 'DFOD', 8, 60517, '200054685584', 'BKI004A', 'PAKET SUDAH DITERIMA'),
-(23, '2022-07-06', 'RISTA', 'MES018B', 1, 'DFOD', 8, 36724, '200055086251', 'KJE002A', 'PAKET SEDANG TRANSIT'),
-(24, '2022-07-06', 'CLARA TARIGAN', 'MES018B', 1, 'TUNAI', 8, 58900, '200054912078', 'JKT005J', 'PAKET SUDAH DITERIMA');
-
---
--- Indexes for dumped tables
---
-
---
--- Indeks untuk tabel `tbl_login`
---
-ALTER TABLE `tbl_login`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `tbl_pengiriman_barang`
---
-ALTER TABLE `tbl_pengiriman_barang`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT untuk tabel yang dibuang
---
-
---
--- AUTO_INCREMENT untuk tabel `tbl_login`
---
-ALTER TABLE `tbl_login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT untuk tabel `tbl_pengiriman_barang`
---
-ALTER TABLE `tbl_pengiriman_barang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+(19, '2022-07-02', 'MEGAWATI LAIA ', 'MES018B', 2, 'TUNAI', 19, 457370, '200053100094', 'TED001J', 'PAKET SEDANG BERADA DI GUDANG');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
