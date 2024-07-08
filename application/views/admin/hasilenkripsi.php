@@ -121,6 +121,7 @@
             <div class="d-flex flex-row">
               <a href="<?= base_url('admin/enkripsi') ?>" class="btn bg-gradient-secondary m-3">Kembali</a>
               <a href="<?= base_url('admin/deleteenkripsi') ?>" class="btn bg-gradient-primary m-3">Kosongkan Tabel</a>
+              <a href="<?=base_url('admin/eksporexcelhasilenkripsi')?>" class="btn bg-gradient-primary m-3">Export</a>
             </div>
 
           </div>

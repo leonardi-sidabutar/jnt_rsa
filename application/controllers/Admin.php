@@ -299,4 +299,9 @@ class Admin extends CI_Controller
 		$data['pengiriman'] = $this->Dekripsi_model->getAllData();
 		$this->load->view('admin/exporthasildek',$data);
 	}
+	public function eksporexcelhasilenkripsi()
+	{
+		$data['pengiriman'] = $this->Enkripsi_model->getAllData();
+		$this->load->view('admin/eksporthasilenk',$data);
+	}
 }
