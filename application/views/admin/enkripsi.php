@@ -71,9 +71,6 @@
                                             Jumlah<br>Biaya Kirim (Rp)</th>
                                         <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
                                             Status<br>Resi</th>
-                                        <th class="text-center text-uppercase text-dark text-xxs font-weight-bolder">
-
-                                            Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -118,12 +115,6 @@
                                         <td class="align-middle text-center text-sm">
                                             <span
                                                 class="badge badge-sm bg-gradient-success"><?= $row['status_resi'] ?></span>
-                                        </td>
-                                        <td class="align-middle text-center text-sm">
-                                            <div class='d-flex' style="flex-direction:column">
-                                                <span class="badge badge-sm bg-gradient-warning mb-2">Ubah</span>
-                                                <span class="badge badge-sm bg-gradient-danger">Hapus</span>
-                                            </div>
                                         </td>
                                     </tr>
                                     <?php endforeach; ?>
