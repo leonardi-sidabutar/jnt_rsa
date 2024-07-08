@@ -124,7 +124,7 @@
                 </div>
                 <br>
                 <div class="card">
-                    <h6 class="mt-2 text-capitalize ps-3">Kunci Private Key</h6>
+                    <h6 class="mt-2 text-capitalize ps-3">Private Key</h6>
                     <!-- batas form  -->
 
                     <div class="border-bottom border-info mb-3"></div>

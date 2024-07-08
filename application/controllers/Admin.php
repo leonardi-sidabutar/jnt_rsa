@@ -302,6 +302,6 @@ class Admin extends CI_Controller
 	public function eksporexcelhasilenk()
 	{
 		$data['pengiriman'] = $this->Enkripsi_model->getAllData();
-		$this->load->view('admin/exporthasildek',$data);
+		$this->load->view('admin/exporthasilenk',$data);
 	}
 }
