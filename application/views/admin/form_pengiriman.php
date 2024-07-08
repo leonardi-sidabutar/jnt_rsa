@@ -39,7 +39,7 @@
                 <div class="card">
                     <div class="card-header p-0 position-relative mx-3 z-index-2">
                         <div class="mt-3">
-                            <span class="text-bold">Edit Data Pengiriman Barang</span>
+                            <span class="text-bold">Ubah Data Pengiriman Barang</span>
                         </div>
                     </div>
                     <div class="card-body">
