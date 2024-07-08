@@ -128,10 +128,10 @@
                                         <td class="align-middle text-center text-sm">
                                             <div class='d-flex' style="flex-direction:column">
                                                 <a href="<?php echo site_url('admin/form_pengiriman/'.$row['id']); ?>"
-                                                    class="badge badge-sm bg-gradient-warning mb-2">Edit</a>
+                                                    class="badge badge-sm bg-gradient-warning mb-2">Ubah</a>
                                                 <a href="<?php echo site_url('admin/delete/'.$row['id']); ?>"
                                                     onclick="return confirm('Apakah Anda Yakin Menghapus data ini?')"
-                                                    class="badge badge-sm bg-gradient-danger mb-2">Delete</a>
+                                                    class="badge badge-sm bg-gradient-danger mb-2">Hapus</a>
                                             </div>
                                         </td>
                                     </tr>

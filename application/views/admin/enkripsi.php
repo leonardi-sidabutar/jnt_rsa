@@ -121,8 +121,8 @@
                                         </td>
                                         <td class="align-middle text-center text-sm">
                                             <div class='d-flex' style="flex-direction:column">
-                                                <span class="badge badge-sm bg-gradient-warning mb-2">Edit</span>
-                                                <span class="badge badge-sm bg-gradient-danger">Delete</span>
+                                                <span class="badge badge-sm bg-gradient-warning mb-2">Ubah</span>
+                                                <span class="badge badge-sm bg-gradient-danger">Hapus</span>
                                             </div>
                                         </td>
                                     </tr>
